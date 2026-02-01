@@ -1,3 +1,40 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+languageCode = 'zh-cn'
 title = 'My New Hugo Site'
+theme = "tailwind"
+pagination.pagerSize = 10
+
+[markup]
+  _merge = "deep"
+
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  [params.header]
+    logo = "images/avatar.jpg"
+    title = "yuriko"
+
+  [params.footer]
+    since = 2023
+    poweredby = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 20
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
